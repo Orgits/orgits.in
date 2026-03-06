@@ -24,7 +24,7 @@ export default function Zoho() {
       <div className="section-inner">
         <div className={styles.inner}>
           <div className="reveal">
-            <div className={styles.badge}>⭐ Zoho Advanced Partner — 200+ Implementations</div>
+            <div className={styles.badge}>⭐Zoho Authorized Partner — 200+ Implementations</div>
             <span className="eyebrow">Zoho Ecosystem</span>
             <h2 className="s-title">Your Complete Zoho Transformation Partner</h2>
             <p className="s-body">Zoho&apos;s 45+ integrated applications can replace dozens of disconnected tools—but only when implemented correctly. We make it actually work.</p>

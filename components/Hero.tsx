@@ -40,7 +40,7 @@ export default function Hero() {
               <div className={styles.statLabel}>Organizations Served</div>
             </div>
             <div>
-              <div className={styles.statNum}>200<span>+</span></div>
+              <div className={styles.statNum}>20<span>+</span></div>
               <div className={styles.statLabel}>Zoho Implementations</div>
             </div>
             <div>

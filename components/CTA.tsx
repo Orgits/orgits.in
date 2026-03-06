@@ -35,8 +35,8 @@ export default function CTA() {
           </div>
           <div className={styles.email}>
             Or email us at{' '}
-            <a href="mailto:anubhav@orgits.com" style={{ color: 'rgba(255,255,255,0.9)', textDecoration: 'underline' }}>
-              anubhav@orgits.com
+            <a href="mailto:Anubhav@orgits.in" style={{ color: 'rgba(255,255,255,0.9)', textDecoration: 'underline' }}>
+              Anubhav@orgits.in
             </a>
           </div>
         </div>
