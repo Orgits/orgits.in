@@ -29,7 +29,7 @@ export default function CaseStudies() {
         </div>
         <div className={`${styles.featured} reveal`}>
           <span className={styles.caseTag}>B2B SaaS | Technology</span>
-          <h3 className={styles.caseTitle}>TechGrowth Solutions — Eliminating 40% Pipeline Leakage</h3>
+          <h3 className={styles.caseTitle}>TechGrowth based — Eliminating 40% Pipeline Leakage</h3>
           <p className={styles.caseBody}>TechGrowth was using 7 different tools for their sales and marketing operations. Data lived in silos, leads fell through cracks, and sales teams spent 15 hours per week on manual data entry. We implemented a unified Zoho ecosystem with automated lead routing, real-time dashboards, and custom workflows reducing manual tasks by 80%.</p>
           <div className={styles.statsRow}>
             {stats.map((s) => (
