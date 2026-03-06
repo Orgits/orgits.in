@@ -1,0 +1,171 @@
+.hero {
+  min-height: 100vh;
+  padding: 120px 40px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(155deg, #ffffff 0%, #eef2fd 50%, #f0f8f7 100%);
+}
+
+.blob1 {
+  position: absolute; top: -140px; right: -100px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(26, 86, 219, 0.07) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: blobPulse 10s ease-in-out infinite;
+  pointer-events: none;
+}
+.blob2 {
+  position: absolute; bottom: 40px; left: -80px;
+  width: 420px; height: 420px;
+  background: radial-gradient(circle, rgba(14, 165, 160, 0.06) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: blobPulse 12s ease-in-out infinite reverse;
+  pointer-events: none;
+}
+
+.inner {
+  max-width: 1200px; margin: 0 auto; width: 100%;
+  position: relative; z-index: 1;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 64px; align-items: center;
+}
+
+/* LEFT */
+.left {}
+
+.tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--primary-light); color: var(--primary);
+  font-family: 'Fira Code', monospace; font-size: 0.67rem; font-weight: 500;
+  letter-spacing: 0.07em; padding: 6px 14px; border-radius: 50px;
+  margin-bottom: 24px; border: 1px solid rgba(26, 86, 219, 0.14);
+  opacity: 0; animation: slideUp 0.7s 0.1s forwards;
+}
+.tagDot {
+  width: 6px; height: 6px; border-radius: 50%; background: var(--primary);
+  animation: dotBlink 2s infinite;
+}
+
+.h1 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 800; font-size: clamp(2.5rem, 4.2vw, 4rem);
+  line-height: 1.06; letter-spacing: -0.035em;
+  margin-bottom: 20px;
+  opacity: 0; animation: slideUp 0.7s 0.25s forwards;
+}
+.hl { color: var(--primary); }
+.hl2 { color: var(--secondary); }
+
+.sub {
+  font-size: 1.05rem; line-height: 1.75; color: var(--text2);
+  font-weight: 400; margin-bottom: 36px; max-width: 500px;
+  opacity: 0; animation: slideUp 0.7s 0.4s forwards;
+}
+
+.actions {
+  display: flex; gap: 12px; flex-wrap: wrap;
+  opacity: 0; animation: slideUp 0.7s 0.55s forwards;
+}
+
+.stats {
+  margin-top: 40px; padding-top: 32px;
+  border-top: 1px solid var(--border);
+  display: flex; gap: 36px; flex-wrap: wrap;
+  opacity: 0; animation: slideUp 0.7s 0.7s forwards;
+}
+.statNum {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.7rem; font-weight: 800; letter-spacing: -0.03em;
+}
+.statNum span { color: var(--primary); }
+.statLabel { font-size: 0.75rem; color: var(--text3); }
+
+/* RIGHT */
+.right {
+  position: relative;
+  opacity: 0; animation: slideUp 0.8s 0.5s forwards;
+}
+
+.floatCard {
+  position: absolute; background: var(--surface);
+  border-radius: var(--radius-md); padding: 14px 18px;
+  box-shadow: var(--shadow-lg); border: 1px solid var(--border);
+  animation: floatBob 5s ease-in-out infinite;
+  z-index: 2;
+}
+.floatCard1 { right: -28px; top: 24px; animation-delay: 0s; }
+.floatCard2 { left: -28px; bottom: 60px; animation-delay: 2.5s; }
+.floatVal {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.15rem; font-weight: 800; letter-spacing: -0.03em;
+}
+.floatLbl { font-size: 0.6rem; color: var(--text3); text-transform: uppercase; letter-spacing: 0.04em; }
+
+.card {
+  background: var(--surface); border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl); padding: 28px;
+  border: 1px solid var(--border); position: relative; overflow: hidden;
+}
+.card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+
+.cardHead {
+  display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;
+}
+.cardTitle { font-family: 'Bricolage Grotesque', sans-serif; font-size: 0.85rem; font-weight: 700; color: var(--text2); }
+.livePill {
+  display: flex; align-items: center; gap: 5px;
+  background: #ecfdf5; color: #059669;
+  font-family: 'Fira Code', monospace; font-size: 0.6rem;
+  padding: 3px 9px; border-radius: 20px; border: 1px solid #a7f3d0;
+}
+.liveDot { width: 5px; height: 5px; background: #10b981; border-radius: 50%; animation: dotBlink 1.2s infinite; }
+
+.metricRow { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin-bottom: 18px; }
+.metricChip { background: var(--bg); border-radius: var(--radius-md); padding: 13px 10px; border: 1px solid var(--border); text-align: center; }
+.metricVal { font-family: 'Bricolage Grotesque', sans-serif; font-size: 1.3rem; font-weight: 800; letter-spacing: -0.03em; color: var(--primary); }
+.metricLbl { font-size: 0.6rem; color: var(--text3); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.04em; }
+
+.miniChart {
+  background: var(--bg); border-radius: var(--radius-md); border: 1px solid var(--border);
+  padding: 14px; height: 76px; display: flex; align-items: flex-end;
+  gap: 5px; margin-bottom: 14px; overflow: hidden;
+}
+.chartBar {
+  flex: 1; border-radius: 4px 4px 0 0;
+  background: linear-gradient(to top, var(--primary), #7eaaff);
+  opacity: 0.65;
+  transform: scaleY(0); transform-origin: bottom;
+  animation: growBar 1.2s ease-out forwards;
+}
+
+.actRows { display: flex; flex-direction: column; gap: 8px; }
+.actRow {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 12px; border-radius: var(--radius-sm);
+  background: var(--bg); border: 1px solid var(--border);
+}
+.actIcon {
+  width: 28px; height: 28px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.8rem; flex-shrink: 0;
+}
+.actBody { flex: 1; }
+.actTitle { font-size: 0.72rem; font-weight: 600; color: var(--text); }
+.actSub { font-size: 0.6rem; color: var(--text3); }
+.actBadge { font-family: 'Fira Code', monospace; font-size: 0.57rem; padding: 3px 8px; border-radius: 20px; font-weight: 500; }
+.badgeBlue { background: var(--primary-light); color: var(--primary); }
+.badgeGreen { background: #ecfdf5; color: #059669; }
+.badgeOrange { background: var(--accent-light); color: var(--accent); }
+
+@media (max-width: 900px) {
+  .hero { padding: 100px 20px 60px; }
+  .inner { grid-template-columns: 1fr; gap: 40px; }
+  .floatCard { display: none; }
+}

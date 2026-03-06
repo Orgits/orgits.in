@@ -1,0 +1,9 @@
+.section { padding: 96px 40px; background: var(--bg); }
+.grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 12px; margin-top: 48px; }
+.card { background: var(--surface); border-radius: var(--radius-lg); border: 1px solid var(--border); padding: 22px 18px; box-shadow: var(--shadow-sm); transition: box-shadow 0.25s, transform 0.25s, border-color 0.25s; }
+.card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); border-color: rgba(26,86,219,0.2); }
+.icon { font-size: 1.4rem; margin-bottom: 12px; display: block; }
+.name { font-family: 'Bricolage Grotesque', sans-serif; font-size: 0.82rem; font-weight: 700; margin-bottom: 3px; }
+.count { font-family: 'Fira Code', monospace; font-size: 0.6rem; color: var(--primary); margin-bottom: 8px; }
+.desc { font-size: 0.7rem; color: var(--text3); line-height: 1.5; }
+@media (max-width: 900px) { .section { padding: 60px 20px; } .grid { grid-template-columns: repeat(3,1fr); } }

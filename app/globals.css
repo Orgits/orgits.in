@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Fira+Code:wght@400;500&display=swap');
+
+:root {
+  --primary: #1a56db;
+  --primary-light: #e8f0fe;
+  --primary-mid: #3b72f0;
+  --primary-dark: #1240b0;
+  --secondary: #0ea5a0;
+  --secondary-light: #e0f7f6;
+  --accent: #f97316;
+  --accent-light: #fff3e8;
+
+  --bg: #f8f9fc;
+  --surface: #ffffff;
+  --surface2: #f1f4f9;
+  --surface3: #e8ecf5;
+
+  --text: #0f1b2d;
+  --text2: #3d5166;
+  --text3: #7a93ab;
+  --text4: #b0c3d4;
+
+  --border: #e2e8f2;
+  --border2: #ccd6e8;
+
+  --shadow-sm: 0 1px 3px rgba(15, 27, 45, 0.07), 0 1px 2px rgba(15, 27, 45, 0.04);
+  --shadow-md: 0 4px 12px rgba(15, 27, 45, 0.08), 0 2px 4px rgba(15, 27, 45, 0.04);
+  --shadow-lg: 0 12px 32px rgba(15, 27, 45, 0.1), 0 4px 8px rgba(15, 27, 45, 0.05);
+  --shadow-xl: 0 24px 60px rgba(15, 27, 45, 0.12), 0 8px 16px rgba(15, 27, 45, 0.06);
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Figtree', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── BUTTONS ── */
+.btn-filled {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary);
+  color: #fff;
+  font-family: 'Figtree', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 13px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 3px 12px rgba(26, 86, 219, 0.35);
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.btn-filled:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(26, 86, 219, 0.4);
+}
+
+.btn-outlined {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--primary);
+  font-family: 'Figtree', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 12px 26px;
+  border-radius: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1.5px solid var(--primary);
+  transition: background 0.2s, transform 0.2s;
+}
+.btn-outlined:hover {
+  background: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+.btn-tonal {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-family: 'Figtree', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s, transform 0.2s;
+}
+.btn-tonal:hover {
+  background: #dce8fd;
+  transform: translateY(-1px);
+}
+
+.arr {
+  transition: transform 0.2s;
+  display: inline-block;
+}
+a:hover .arr {
+  transform: translateX(3px);
+}
+
+/* ── SECTION COMMON ── */
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: var(--primary);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.eyebrow::before {
+  content: '';
+  width: 18px;
+  height: 2px;
+  background: var(--primary);
+  border-radius: 2px;
+  display: block;
+}
+
+.s-title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.s-body {
+  font-size: 1rem;
+  color: var(--text2);
+  line-height: 1.75;
+  font-weight: 400;
+  max-width: 560px;
+}
+
+/* ── ICON BACKGROUNDS ── */
+.ic-blue { background: var(--primary-light); }
+.ic-teal { background: var(--secondary-light); }
+.ic-orange { background: var(--accent-light); }
+.ic-purple { background: #f3eeff; }
+.ic-green { background: #ecfdf5; }
+
+/* ── CHIPS ── */
+.chip {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.57rem;
+  padding: 3px 9px;
+  border-radius: 20px;
+  background: var(--surface2);
+  color: var(--text2);
+  border: 1px solid var(--border);
+}
+
+/* ── REVEAL ANIMATION ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── SCROLL BAR ── */
+@keyframes scrollCreds {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ── BLOB ANIMATIONS ── */
+@keyframes blobPulse {
+  0%, 100% { transform: scale(1) translate(0, 0); }
+  50% { transform: scale(1.07) translate(16px, -16px); }
+}
+
+/* ── CHART BAR GROW ── */
+@keyframes growBar {
+  to { transform: scaleY(1); }
+}
+
+/* ── DOT BLINK ── */
+@keyframes dotBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* ── FLOAT BOB ── */
+@keyframes floatBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* ── SLIDE UP ── */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 900px) {
+  .hide-mobile { display: none !important; }
+}
