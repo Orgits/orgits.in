@@ -9,6 +9,6 @@
 .role { font-size: 0.72rem; color: var(--text3); margin-top: 2px; }
 .ratingCard { background: var(--primary); border-radius: var(--radius-lg); padding: 28px; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; box-shadow: 0 8px 24px rgba(26,86,219,0.3); }
 .bigNum { font-family: 'Bricolage Grotesque', sans-serif; font-size: 3rem; font-weight: 800; color: #fff; letter-spacing: -0.05em; margin-bottom: 4px; }
-.ratingStars { color: rgba(255,255,255,0.9); font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 10px; }
+.ratingStars { color: rgba(255,255,255,0.9); font-size: 1.1rem; letter-spacing: 2px; margin-bottom: 10px; }
 .ratingSub { font-size: 0.75rem; color: rgba(255,255,255,0.7); margin-bottom: 18px; }
 @media (max-width: 900px) { .section { padding: 60px 20px; } .grid { grid-template-columns: 1fr 1fr; } }

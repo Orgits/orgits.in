@@ -38,14 +38,14 @@
 
 .tag {
   display: inline-flex; align-items: center; gap: 8px;
-  background: var(--primary-light); color: var(--primary);
+  background: var(--primary-light, #eff4ff); color: var(--primary, #1a56db);
   font-family: 'Fira Code', monospace; font-size: 0.67rem; font-weight: 500;
   letter-spacing: 0.07em; padding: 6px 14px; border-radius: 50px;
   margin-bottom: 24px; border: 1px solid rgba(26, 86, 219, 0.14);
   opacity: 0; animation: slideUp 0.7s 0.1s forwards;
 }
 .tagDot {
-  width: 6px; height: 6px; border-radius: 50%; background: var(--primary);
+  width: 6px; height: 6px; border-radius: 50%; background: var(--primary, #1a56db);
   animation: dotBlink 2s infinite;
 }
 
@@ -56,11 +56,11 @@
   margin-bottom: 20px;
   opacity: 0; animation: slideUp 0.7s 0.25s forwards;
 }
-.hl { color: var(--primary); }
-.hl2 { color: var(--secondary); }
+.hl { color: var(--primary, #1a56db); }
+.hl2 { color: var(--secondary, #0ea5a0); }
 
 .sub {
-  font-size: 1.05rem; line-height: 1.75; color: var(--text2);
+  font-size: 1.05rem; line-height: 1.75; color: var(--text2, #4b5563);
   font-weight: 400; margin-bottom: 36px; max-width: 500px;
   opacity: 0; animation: slideUp 0.7s 0.4s forwards;
 }
@@ -72,7 +72,7 @@
 
 .stats {
   margin-top: 40px; padding-top: 32px;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--border, #e5e7eb);
   display: flex; gap: 36px; flex-wrap: wrap;
   opacity: 0; animation: slideUp 0.7s 0.7s forwards;
 }
@@ -80,8 +80,8 @@
   font-family: 'Bricolage Grotesque', sans-serif;
   font-size: 1.7rem; font-weight: 800; letter-spacing: -0.03em;
 }
-.statNum span { color: var(--primary); }
-.statLabel { font-size: 0.75rem; color: var(--text3); }
+.statNum span { color: var(--primary, #1a56db); }
+.statLabel { font-size: 0.75rem; color: var(--text3, #9ca3af); }
 
 /* RIGHT */
 .right {
@@ -90,9 +90,10 @@
 }
 
 .floatCard {
-  position: absolute; background: var(--surface);
-  border-radius: var(--radius-md); padding: 14px 18px;
-  box-shadow: var(--shadow-lg); border: 1px solid var(--border);
+  position: absolute; background: var(--surface, #ffffff);
+  border-radius: var(--radius-md, 12px); padding: 14px 18px;
+  box-shadow: var(--shadow-lg, 0 10px 30px rgba(0,0,0,0.12));
+  border: 1px solid var(--border, #e5e7eb);
   animation: floatBob 5s ease-in-out infinite;
   z-index: 2;
 }
@@ -102,23 +103,23 @@
   font-family: 'Bricolage Grotesque', sans-serif;
   font-size: 1.15rem; font-weight: 800; letter-spacing: -0.03em;
 }
-.floatLbl { font-size: 0.6rem; color: var(--text3); text-transform: uppercase; letter-spacing: 0.04em; }
+.floatLbl { font-size: 0.6rem; color: var(--text3, #9ca3af); text-transform: uppercase; letter-spacing: 0.04em; }
 
 .card {
-  background: var(--surface); border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-xl); padding: 28px;
-  border: 1px solid var(--border); position: relative; overflow: hidden;
+  background: var(--surface, #ffffff); border-radius: var(--radius-xl, 20px);
+  box-shadow: var(--shadow-xl, 0 20px 60px rgba(0,0,0,0.15)); padding: 28px;
+  border: 1px solid var(--border, #e5e7eb); position: relative; overflow: hidden;
 }
 .card::before {
   content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
-  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  background: linear-gradient(90deg, var(--primary, #1a56db), var(--secondary, #0ea5a0));
+  border-radius: var(--radius-xl, 20px) var(--radius-xl, 20px) 0 0;
 }
 
 .cardHead {
   display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;
 }
-.cardTitle { font-family: 'Bricolage Grotesque', sans-serif; font-size: 0.85rem; font-weight: 700; color: var(--text2); }
+.cardTitle { font-family: 'Bricolage Grotesque', sans-serif; font-size: 0.85rem; font-weight: 700; color: var(--text2, #4b5563); }
 .livePill {
   display: flex; align-items: center; gap: 5px;
   background: #ecfdf5; color: #059669;
@@ -128,18 +129,22 @@
 .liveDot { width: 5px; height: 5px; background: #10b981; border-radius: 50%; animation: dotBlink 1.2s infinite; }
 
 .metricRow { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin-bottom: 18px; }
-.metricChip { background: var(--bg); border-radius: var(--radius-md); padding: 13px 10px; border: 1px solid var(--border); text-align: center; }
-.metricVal { font-family: 'Bricolage Grotesque', sans-serif; font-size: 1.3rem; font-weight: 800; letter-spacing: -0.03em; color: var(--primary); }
-.metricLbl { font-size: 0.6rem; color: var(--text3); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.04em; }
+.metricChip {
+  background: var(--bg, #f9fafb); border-radius: var(--radius-md, 12px);
+  padding: 13px 10px; border: 1px solid var(--border, #e5e7eb); text-align: center;
+}
+.metricVal { font-family: 'Bricolage Grotesque', sans-serif; font-size: 1.1rem; font-weight: 800; letter-spacing: -0.03em; color: var(--primary, #1a56db); }
+.metricLbl { font-size: 0.6rem; color: var(--text3, #9ca3af); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.04em; }
 
 .miniChart {
-  background: var(--bg); border-radius: var(--radius-md); border: 1px solid var(--border);
+  background: var(--bg, #f9fafb); border-radius: var(--radius-md, 12px);
+  border: 1px solid var(--border, #e5e7eb);
   padding: 14px; height: 76px; display: flex; align-items: flex-end;
   gap: 5px; margin-bottom: 14px; overflow: hidden;
 }
 .chartBar {
   flex: 1; border-radius: 4px 4px 0 0;
-  background: linear-gradient(to top, var(--primary), #7eaaff);
+  background: linear-gradient(to top, var(--primary, #1a56db), #7eaaff);
   opacity: 0.65;
   transform: scaleY(0); transform-origin: bottom;
   animation: growBar 1.2s ease-out forwards;
@@ -148,22 +153,57 @@
 .actRows { display: flex; flex-direction: column; gap: 8px; }
 .actRow {
   display: flex; align-items: center; gap: 10px;
-  padding: 10px 12px; border-radius: var(--radius-sm);
-  background: var(--bg); border: 1px solid var(--border);
+  padding: 10px 12px; border-radius: var(--radius-sm, 8px);
+  background: var(--bg, #f9fafb); border: 1px solid var(--border, #e5e7eb);
 }
 .actIcon {
   width: 28px; height: 28px; border-radius: 8px;
   display: flex; align-items: center; justify-content: center;
   font-size: 0.8rem; flex-shrink: 0;
 }
-.actBody { flex: 1; }
-.actTitle { font-size: 0.72rem; font-weight: 600; color: var(--text); }
-.actSub { font-size: 0.6rem; color: var(--text3); }
-.actBadge { font-family: 'Fira Code', monospace; font-size: 0.57rem; padding: 3px 8px; border-radius: 20px; font-weight: 500; }
-.badgeBlue { background: var(--primary-light); color: var(--primary); }
-.badgeGreen { background: #ecfdf5; color: #059669; }
-.badgeOrange { background: var(--accent-light); color: var(--accent); }
 
+/* FIX #3: icon colour classes (were passed as plain strings, now proper module classes) */
+.icBlue   { background: var(--primary-light, #eff4ff); }
+.icTeal   { background: #f0fdfa; }
+.icOrange { background: var(--accent-light, #fff7ed); }
+
+.actBody { flex: 1; }
+.actTitle { font-size: 0.72rem; font-weight: 600; color: var(--text, #111827); }
+.actSub { font-size: 0.6rem; color: var(--text3, #9ca3af); }
+.actBadge { font-family: 'Fira Code', monospace; font-size: 0.57rem; padding: 3px 8px; border-radius: 20px; font-weight: 500; }
+.badgeBlue   { background: var(--primary-light, #eff4ff); color: var(--primary, #1a56db); }
+.badgeGreen  { background: #ecfdf5; color: #059669; }
+.badgeOrange { background: var(--accent-light, #fff7ed); color: var(--accent, #ea580c); }
+
+/* ─── KEYFRAMES (FIX #1 — were missing, caused all opacity:0 elements to stay hidden) ─── */
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes blobPulse {
+  0%, 100% { transform: scale(1) translate(0, 0); }
+  33%       { transform: scale(1.08) translate(12px, -18px); }
+  66%       { transform: scale(0.94) translate(-10px, 12px); }
+}
+
+@keyframes dotBlink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.25; }
+}
+
+@keyframes floatBob {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+
+@keyframes growBar {
+  from { transform: scaleY(0); opacity: 0; }
+  to   { transform: scaleY(1); opacity: 0.65; }
+}
+
+/* ─── RESPONSIVE ─── */
 @media (max-width: 900px) {
   .hero { padding: 100px 20px 60px; }
   .inner { grid-template-columns: 1fr; gap: 40px; }

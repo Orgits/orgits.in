@@ -5,8 +5,8 @@
 .cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin-bottom: 32px; }
 .card { background: rgba(255,255,255,0.12); border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.2); padding: 22px 18px; text-align: left; text-decoration: none; display: block; transition: background 0.25s, transform 0.25s; backdrop-filter: blur(10px); }
 .card:hover { background: rgba(255,255,255,0.2); transform: translateY(-4px); }
-.cardIcon { font-size: 1.3rem; margin-bottom: 10px; display: block; }
-.cardTitle { font-family: 'Bricolage Grotesque', sans-serif; font-size: 0.9rem; font-weight: 700; color: #fff; margin-bottom: 4px; }
+.cardIcon { font-size: 1.1rem; margin-bottom: 10px; display: block; }
+.cardTitle { font-family: 'Bricolage Grotesque', sans-serif; font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 4px; }
 .cardDesc { font-size: 0.74rem; color: rgba(255,255,255,0.7); line-height: 1.5; }
 .trust { display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; }
 .trustItem { display: flex; align-items: center; gap: 6px; font-size: 0.78rem; color: rgba(255,255,255,0.75); }
