@@ -29,8 +29,8 @@ export default function CaseStudies() {
         </div>
         <div className={`${styles.featured} reveal`}>
           <span className={styles.caseTag}>B2B SaaS | Technology</span>
-          <h3 className={styles.caseTitle}>TechGrowth based — Eliminating 40% Pipeline Leakage</h3>
-          <p className={styles.caseBody}>TechGrowth was using 7 different tools for their sales and marketing operations. Data lived in silos, leads fell through cracks, and sales teams spent 15 hours per week on manual data entry. We implemented a unified Zoho ecosystem with automated lead routing, real-time dashboards, and custom workflows reducing manual tasks by 80%.</p>
+          <h3 className={styles.caseTitle}>CA Nexus — Eliminating 40% Pipeline Leakage</h3>
+          <p className={styles.caseBody}>CA Nexus was operating across 7 disconnected tools for their sales and marketing operations. Data lived in silos, leads fell through the cracks, and their sales team was losing 15 hours every week to manual data entry. We stepped in with a unified Zoho ecosystem — automating lead routing, building real-time dashboards, and designing custom workflows that cut manual workload by 80%.</p>
           <div className={styles.statsRow}>
             {stats.map((s) => (
               <div key={s.lbl} className={styles.cstat}>
@@ -39,7 +39,7 @@ export default function CaseStudies() {
               </div>
             ))}
           </div>
-          <div className={styles.quote}>&ldquo;Orgits didn&apos;t just implement Zoho, they reimagined our entire revenue process. The ROI was measurable within weeks.&rdquo; — <strong>Sarah Mitchell, VP of Sales, TechGrowth Solutions</strong></div>
+          <div className={styles.quote}>&ldquo;Orgits didn&apos;t just implement Zoho, they reimagined our entire revenue process. The ROI was measurable within weeks.&rdquo; — <strong>CMO of, CA Nexus</strong></div>
           <div style={{ marginTop: '20px' }}>
             <Link href="#" className="btn-tonal">Read Full Case Study <span className="arr">→</span></Link>
           </div>

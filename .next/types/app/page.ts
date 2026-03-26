@@ -1,4 +1,4 @@
-// File: /Users/anubhav/Downloads/orgits 3/app/page.tsx
+// File: /Users/anubhav/Github/production/ORGITS CURRENT/orgits.in/app/page.tsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
